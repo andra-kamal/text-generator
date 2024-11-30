@@ -19,28 +19,5 @@ spec:
         image: gcr.io/iron-dynamics-440303-r9/fastapi-app:lastest
         ports:
         - containerPort: 80
-        readinessProbe:
-          failureThreshold: 10
-          httpGet:
-            path: /health
-            port: 8080
-            scheme: HTTP
-            periodSeconds: 60
-            timeoutSeconds: 120
-        livenessProbe:
-          failureThreshold: 10
-          httpGet:
-            path: /health
-            port: 8080
-            scheme: HTTP
-            initialDelaySeconds: 70
-            periodSeconds: 60
-            timeoutSeconds: 120
-        resources:
-          requests:
-            cpu: 1000m
-            memory: 7Gi
-          limits:
-            memory: 7100Mi
         
 
