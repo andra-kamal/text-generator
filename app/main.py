@@ -35,6 +35,7 @@ async def generate_text_endpoint(request: PromptRequest):
     generated_text = generate_text(prompt, max_length)
     return {"generated_text": generated_text}
 
+#test commit
 # Endpoint root
 @app.get("/")
 def read_root():
